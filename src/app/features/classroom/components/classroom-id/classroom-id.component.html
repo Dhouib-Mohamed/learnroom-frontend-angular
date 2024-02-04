@@ -12,6 +12,6 @@
     </div>
   </div>
   <div class="modal-footer">
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary" [disabled]="classroomForm.invalid">{{ "Submit"|translate}}</button>
   </div>
 </form>

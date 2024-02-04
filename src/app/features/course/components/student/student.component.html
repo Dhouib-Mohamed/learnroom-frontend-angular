@@ -1,17 +1,17 @@
 <!-- student.component.html -->
 <div style="display: flex; flex-direction: column ; align-self: start ; align-content: start; padding-top: 10px;width: 100%">
-  <h4>Teacher :</h4>
-  <div class="student">
-    <app-avatar
-      [name]="'nada'"
-      [avatarColor]="'green' "
+  <h4 class="mb-3">Teacher :</h4>
+  <div class="teacher mb-5" >
+    <app-avatar style="transform: scale(1.2);"
+      [name]=" users?.teacher?.name ?? ''"
+      [avatarColor]="users?.teacher?.avatar_color ?? 'grey'"
     ></app-avatar>
     <div class="card-body">
       <div class="name">{{ users?.teacher?.name}}</div>
       <div class="email">{{ users?.teacher?.email}}</div>
     </div>
   </div>
-  <h4>{{ "Students"|translate}} :</h4>
+  <h5>{{ "Students"|translate}} :</h5>
   <div *ngIf="users?.students?.length===0">
     <app-empty-list-placeholder
       [user]="(authService.isTeacher$ | async) ? 'teacher' : 'student'"
@@ -37,7 +37,7 @@
               <div class="email">{{ student?.email  }}</div>
             </div>
           </li>
-          <div class="divider"></div>
+          <!-- <div class="divider"></div> -->
     </ul>
   </div>
 

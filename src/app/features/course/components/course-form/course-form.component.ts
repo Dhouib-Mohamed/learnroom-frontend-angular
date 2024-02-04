@@ -28,7 +28,6 @@ export class CourseFormComponent {
 
   onSubmit() {
     if (this.courseForm.valid) {
-      // Handle form submission or emit an event
       const formValues = this.courseForm.value;
       this.submit.emit(formValues);
       this.modal.dismiss();

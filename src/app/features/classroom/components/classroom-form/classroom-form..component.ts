@@ -35,14 +35,16 @@ export class ClassroomFormComponent {
     if (this.classroomForm.valid && this.userId) {
       this.submit.emit(formValues);
       this.modal.dismiss();
+      
     }
   }
+
   validateField(field: string, code: string) {
     const formControl = this.classroomForm.get(field);
     return formControl?.hasError(code) && formControl?.touched;
   }
+
   onClose() {
-    // Handle close modal logic here
     this.modal.dismiss();
   }
 }

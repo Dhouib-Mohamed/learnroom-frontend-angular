@@ -8,6 +8,7 @@ import {TaskService} from "@features/task/task.service";
 import {User} from "@core/models/user.model";
 import {FormBuilder} from "@angular/forms";
 import {TaskFormComponent} from "@features/task/components/task-form/task-form.component";
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-task-details',
@@ -30,6 +31,7 @@ export class TaskDetailsComponent implements OnInit {
     public authService: AuthPersistence,
     private router: Router,
     private formBuilder: FormBuilder,
+    private location: Location
   ) {}
 
   ngOnInit(): void {
@@ -70,7 +72,7 @@ export class TaskDetailsComponent implements OnInit {
   deleteTask() {
     this.taskService.deleteTask(this.taskId).subscribe(
       {complete: () => {
-          this.router.navigate(['/classroom']);
+          this.location.back();
         }}
     )
 

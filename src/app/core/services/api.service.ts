@@ -82,7 +82,7 @@ export class ApiService {
       map((obj) => {
         const result = obj as Entity & { message: string };
 
-        if (result.message) {
+        if (result.message && result.message.length > 3) {
           this.toastr.error(result.message, 'Error');
           return {} as Entity;
         }

@@ -7,6 +7,7 @@ import {Assignement, ResponseAssignement} from "@core/models/assignment.model";
 import {AuthPersistence} from "@core/services/auth.persistence";
 import {AssignmentFormComponent} from "@features/assignment/components/assignment-form/assignment-form.component";
 import {AssignementService} from "@features/assignment/assignement.service";
+import { Location } from '@angular/common';
 
 
 @Component({
@@ -32,15 +33,15 @@ export class AssignementDetailsComponent implements OnInit {
 });
   responses= this.scoreForm.get('responses') as FormArray;
   isDeadLine: boolean = false;
-  constructor(private route: ActivatedRoute,
-              public authService : AuthPersistence,
-              private router:Router,
-              private formBuilder: FormBuilder,
-              private assignmentService: AssignementService)
-  {
-
-
-  }
+  
+  constructor(
+    private route: ActivatedRoute,
+    public authService : AuthPersistence,
+    private router:Router,
+    private formBuilder: FormBuilder,
+    private assignmentService: AssignementService,
+    private location: Location
+    ){}
 
   ngOnInit(): void {
     this.route.params.pipe(tap(param=>{
@@ -94,8 +95,7 @@ export class AssignementDetailsComponent implements OnInit {
   }
   deleteAssignment(){
   this.assignmentService.deleteAssignment(this.assignmentId)
-  this.router.navigate(['/classroom']);
-
+  this.location.back();
   }
   editAssignement(formValues:any)
   {

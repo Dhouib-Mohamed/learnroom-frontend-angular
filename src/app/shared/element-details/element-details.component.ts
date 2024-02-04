@@ -15,10 +15,12 @@ export class ElementDetailsComponent {
 
   @Output() deleteElement = new EventEmitter();
   @Output() editModeChange: EventEmitter<boolean> = new EventEmitter<boolean>();
+  
   toggleEditMode() {
     this.editMode = !this.editMode;
     this.editModeChange.emit(this.editMode);
   }
+
   deleteFunction() {
     this.deleteElement.emit();
   }
