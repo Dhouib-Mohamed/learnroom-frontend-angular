@@ -63,9 +63,9 @@
   "Cancel": "Annuler",
   "Deadline is required": "La date limite est requise",
   "Content is required": "Le contenu est requis",
-  "Assignment Title is required": "Le titre de l'assignation est requis",
-  "Assignment Title": "Titre de l'assignation",
-  "Assignment points is required": "Les points de l'assignation sont requis",
+  "Assignment Title is required": "Le titre du devoir est requis",
+  "Assignment Title": "Titre du devoir",
+  "Assignment points is required": "Les points du devoir sont requis",
   "Add": "Ajouter",
   "Edit": "Modifier",
   "Description:": "Description :",
@@ -88,8 +88,23 @@
   "Enroll Student": "Inscrire l'étudiant",
   "Student's email": "Email de l'étudiant",
   "Student's email is required": "L'email de l'étudiant est requis",
-  "Enroll in a classroom": "S'inscrire dans une salle de classe",
-  "Create a classroom": "Créer une salle de classe"
+  "Enroll in a classroom": "S'inscrire dans Classroom",
+  "Create a classroom": "Créer Classroom",
+  "Add Classroom": "Ajouter Classroom",
+  "NO Assignments Yet": "Aucune devoir pour le moment",
+  "Add Assignment": "Ajouter un devoir",
+  "View Course Details": "Voir les détails du cours",
+  "Course Name": "Nom du cours",
+  "Course Name is required": "Le nom du cours est requis",
+  "Add course": "Ajouter un cours",
+  "NO Tasks Yet": "Aucune tâche pour le moment",
+  "Add Task": "Ajouter une tâche",
+  "View": "Voir",
+  "Add Student": "Ajouter un étudiant",
+  "List of assignments": "Liste des devoirs",
+  "List of tasks": "Liste des tâches",
+  "Students": "Étudiants"
+
 
 
 }

@@ -89,7 +89,21 @@
   "Student's email": "Student's email",
   "Student's email is required": "Student's email is required",
   "Enroll in a classroom":"Enroll in a classroom",
-  "Create a classroom": "Create a classroom"
+  "Create a classroom": "Create a classroom",
+  "Add Classroom": "Add Classroom",
+  "NO Assignments Yet": "NO Assignments Yet",
+  "Add Assignment": "Add Assignment",
+  "View Course Details": "View Course Details",
+  "Course Name": "Course Name",
+  "Course Name is required": "Course Name is required",
+  "Add course": "Add course",
+  "NO Tasks Yet": "NO Tasks Yet",
+  "Add Task": "Add Task",
+  "View": "View",
+  "Add Student": "Add Student",
+  "List of assignments": "List of assignments",
+  "List of tasks": "List of tasks",
+  "Students": "Students"
 
 
 

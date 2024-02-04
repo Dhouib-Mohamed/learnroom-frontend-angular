@@ -22,13 +22,13 @@
       }"
     />
 
-    <h5><li>List of tasks</li></h5>
+    <h5><li>{{ "List of tasks"|translate}}</li></h5>
     <app-task-list
       [withButton]="true"
       [tasks]="(tasks$ | async) || []"
       [courseId]="courseId"
     ></app-task-list>
-    <h5><li>List of assignments</li></h5>
+    <h5><li>{{ "List of assignments"|translate}}</li></h5>
     <app-assignment-list
       [withButton]="true"
       [assignments]="(assignments$ | async) || []"

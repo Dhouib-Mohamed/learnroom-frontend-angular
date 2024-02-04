@@ -16,7 +16,7 @@
   <hr class="my-4" />
   <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
     <li [ngbNavItem]="1">
-      <button ngbNavLink>Courses</button>
+      <button ngbNavLink>{{ "Courses"|translate}}</button>
       <ng-template ngbNavContent>
         <form [formGroup]="searchForm" class="form-group" style="width: 50%">
           <div class="input-group">
@@ -29,7 +29,7 @@
       </ng-template>
     </li>
     <li [ngbNavItem]="2">
-      <button ngbNavLink>Tasks</button>
+      <button ngbNavLink>{{ "Tasks"|translate}}</button>
       <ng-template ngbNavContent>
         <div *ngIf="!(this.authService.isTeacher$ | async)" class="d-flex">
           <button [className]="taskFilter === undefined ? 'btn btn-primary btn-rounded m-3' : 'btn btn-secondary btn-rounded m-3'" (click)="onTaskFilterChange(undefined)">All</button>
@@ -42,7 +42,7 @@
 
 
     <li [ngbNavItem]="3">
-      <button ngbNavLink>Assignments</button>
+      <button ngbNavLink>{{ "Assignments"|translate}}</button>
       <ng-template ngbNavContent>
         <p>
           <app-assignment-list [assignments]="(assignments$ | async)  || []"></app-assignment-list>
@@ -50,7 +50,7 @@
       </ng-template>
     </li>
     <li [ngbNavItem]="4">
-      <button ngbNavLink>Students</button>
+      <button ngbNavLink>{{ "Students"|translate}}</button>
       <ng-template ngbNavContent>
         <div   style="
     display: flex;
@@ -59,7 +59,7 @@
         <app-students [users]="(students$ | async)!"></app-students>
         <button  class="btn btn-primary btn-rounded"
       style=" background-color: #12b7bd;     align-items: center;
-;margin-top: 10px; margin-bottom: 10px; align-self:center;border-radius: 20px;" *ngIf="(this.authService.isTeacher$ | async)" (click)="onAddStudentClick()">Add Student</button>
+;margin-top: 10px; margin-bottom: 10px; align-self:center;border-radius: 20px;" *ngIf="(this.authService.isTeacher$ | async)" (click)="onAddStudentClick()">{{ "Add Student"|translate}}</button>
         </div>
       </ng-template>
     </li>

@@ -28,14 +28,14 @@
     />
 
     <div style="font-size: 18px; margin-top: 20px; margin-bottom: 10px">
-      Tasks:
+      {{ "Tasks"|translate}}:
     </div>
     <app-task-list
       [inCard]="true"
       [tasks]="(tasks$ | async) || []"
     ></app-task-list>
     <div style="font-size: 18px; margin-top: 20px; margin-bottom: 10px">
-      Assignments:
+      {{ "Assignments"|translate}}:
     </div>
     <app-assignment-list
       [inCard]="true"
@@ -56,7 +56,7 @@
       "
       (click)="onCourseClick()"
     >
-      View Course Details
+      {{ "View Course Details"|translate}}
     </button>
   </div>
 </div>

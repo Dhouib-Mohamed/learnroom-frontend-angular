@@ -14,7 +14,7 @@
       [user]="(authService.isTeacher$ | async) ? 'teacher' : 'student'"
     ></app-empty-list-placeholder>
   </div>
-  <div *ngIf="inCard">NO Assignments Yet</div>
+  <div *ngIf="inCard">{{ "NO Assignments Yet"|translate}}</div>
 </ng-template>
 
 <div
@@ -36,6 +36,6 @@
     "
     (click)="onAddAssignmentClick()"
   >
-    Add Assignment
+    {{ "Add Assignment"|translate}}
   </button>
 </div>

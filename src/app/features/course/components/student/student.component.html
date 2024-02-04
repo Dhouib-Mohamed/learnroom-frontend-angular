@@ -11,7 +11,7 @@
       <div class="email">{{ users?.teacher?.email}}</div>
     </div>
   </div>
-  <h4>Students :</h4>
+  <h4>{{ "Students"|translate}} :</h4>
   <div *ngIf="users?.students?.length===0">
     <app-empty-list-placeholder
       [user]="(authService.isTeacher$ | async) ? 'teacher' : 'student'"

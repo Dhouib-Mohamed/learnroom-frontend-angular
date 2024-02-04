@@ -18,6 +18,7 @@ import {TaskListComponent} from "@features/course/components/task-list/task-list
 import {
   Task_assignmentCardComponent
 } from "@features/course/components/task_assignment-card/task_assignment-card.component";
+import {TranslateModule} from "@ngx-translate/core";
 
 @NgModule({
   declarations: [
@@ -32,13 +33,14 @@ import {
     TaskListComponent,
     Task_assignmentCardComponent,
   ],
-  imports: [
-    CommonModule,
-    CourseRoutingModule,
-    SharedModule,
-    ReactiveFormsModule,
-    NgbNavModule,
-  ],
+    imports: [
+        CommonModule,
+        CourseRoutingModule,
+        SharedModule,
+        ReactiveFormsModule,
+        NgbNavModule,
+        TranslateModule,
+    ],
   exports: [CourseListComponent],
 })
 export class CourseModule {}
