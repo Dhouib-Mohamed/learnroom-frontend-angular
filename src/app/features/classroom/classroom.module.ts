@@ -10,6 +10,7 @@ import { ClassroomFormComponent } from '@features/classroom/components/classroom
 import { SharedModule } from '@shared/shared.module';
 import { StudentFormComponent } from '@features/classroom/components/student-form/student-form.component';
 import { ClassroomsPageComponent } from './pages/classrooms-page/classrooms-page.component';
+import {TranslateModule} from "@ngx-translate/core";
 
 @NgModule({
   declarations: [
@@ -20,13 +21,14 @@ import { ClassroomsPageComponent } from './pages/classrooms-page/classrooms-page
     StudentFormComponent,
     ClassroomsPageComponent,
   ],
-  imports: [
-    SharedModule,
-    NgbNavModule,
-    CommonModule,
-    ClassroomRoutingModule,
-    ReactiveFormsModule,
-  ],
+    imports: [
+        SharedModule,
+        NgbNavModule,
+        CommonModule,
+        ClassroomRoutingModule,
+        ReactiveFormsModule,
+        TranslateModule,
+    ],
   exports: [ClassroomCardComponent, ClassroomListComponent],
 })
 export class ClassroomModule {}

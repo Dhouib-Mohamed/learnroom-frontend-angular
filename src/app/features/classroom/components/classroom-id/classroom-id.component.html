@@ -1,13 +1,13 @@
 <form [formGroup]="classroomForm" (ngSubmit)="onSubmit()">
   <div class="modal-body">
     <div class="form-group">
-      <label>Classroom's ID</label>
+      <label>{{ "Classroom's ID"|translate}}</label>
       <input formControlName="id" class="form-control" />
       <div
         *ngIf="classroomForm.get('id')?.hasError('required')"
         class="text-danger"
       >
-        Classroom's ID is required
+        {{ "Classroom's ID is required"|translate}}
       </div>
     </div>
   </div>

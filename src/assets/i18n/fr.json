@@ -77,7 +77,19 @@
   "Your submission:": "Votre soumission :",
   "Deadline": "Date limite",
   "Max Points": "Points max",
-  "Content": "Contenu"
+  "Content": "Contenu",
+  "Classroom Name": "Nom du Classroom",
+  "Classroom Name is required": "Le nom du Classroom est requis",
+  "Description": "Description",
+  "Description is required": "La description est requise",
+  "Classroom's ID": "ID du Classroom",
+  "Classroom's ID is required": "L'ID du Classroom est requis",
+  "No results found": "Aucun résultat trouvé",
+  "Enroll Student": "Inscrire l'étudiant",
+  "Student's email": "Email de l'étudiant",
+  "Student's email is required": "L'email de l'étudiant est requis",
+  "Enroll in a classroom": "S'inscrire dans une salle de classe",
+  "Create a classroom": "Créer une salle de classe"
 
 
 }

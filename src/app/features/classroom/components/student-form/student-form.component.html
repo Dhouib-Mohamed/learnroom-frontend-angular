@@ -1,5 +1,5 @@
 <div class="modal-header">
-  <h4 class="modal-title" id="modal-basic-title">Enroll Student</h4>
+  <h4 class="modal-title" id="modal-basic-title">{{ "Enroll Student"|translate}}</h4>
   <button
     type="button"
     class="btn-close"
@@ -10,7 +10,7 @@
 <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
   <div class="modal-body">
     <div class="form-group">
-      <label for="email">Student's email</label>
+      <label for="email">{{ "Student's email"|translate}}</label>
       <input
         type="text"
         id="email"
@@ -18,10 +18,10 @@
         formControlName="email"
       />
       <div *ngIf="validateField('email', 'required')" class="text-danger">
-        Student's email is required
+        {{ "Student's email is required"|translate}}
       </div>
       <div *ngIf="validateField('email', 'pattern')" class="text-danger">
-        Invalid email format
+        {{ "Invalid email format"|translate}}
       </div>
     </div>
   </div>
@@ -31,10 +31,10 @@
       class="btn btn-primary"
       [disabled]="studentForm.invalid"
     >
-      Submit
+      {{ "Submit"|translate}}
     </button>
     <button type="button" class="btn btn-secondary" (click)="onClose()">
-      Cancel
+      {{ "Cancel"|translate}}
     </button>
   </div>
 </form>

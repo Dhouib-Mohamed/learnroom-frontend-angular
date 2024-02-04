@@ -70,14 +70,27 @@
   "Edit": "Edit",
   "Description:": "Description:",
   "Name must be at least 4 characters long.": "Name must be at least 4 characters long.",
-   "Submit": "Submit",
+  "Submit": "Submit",
   "Student Name": "Student Name",
   "Score :": "Score :",
   "Validate": "Validate",
   "Your submission:": "Your submission :",
   "Deadline": "Deadline",
   "Max Points": "Max Points",
-  "Content": "Content"
+  "Content": "Content",
+  "Classroom Name": "Classroom Name",
+  "Classroom Name is required": "Classroom Name is required",
+  "Description": "Description",
+  "Description is required": "Description is required",
+  "Classroom's ID": "Classroom's ID",
+  "Classroom's ID is required": "Classroom's ID is required",
+  "No results found": "No results found",
+  "Enroll Student": "Enroll Student",
+  "Student's email": "Student's email",
+  "Student's email is required": "Student's email is required",
+  "Enroll in a classroom":"Enroll in a classroom",
+  "Create a classroom": "Create a classroom"
+
 
 
 }

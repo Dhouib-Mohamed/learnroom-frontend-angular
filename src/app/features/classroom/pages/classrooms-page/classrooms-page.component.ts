@@ -35,7 +35,7 @@ export class ClassroomsPageComponent {
   classroomService = inject(ClassroomService);
   classrooms$: Observable<Classroom []> | undefined = new Observable<Classroom[]>()
   isTeacher: boolean | undefined;
-  label = 'Enroll in a classroom';
+  label = "Enroll in a classroom";
   searchForm: FormGroup = new FormGroup({});
   searchResults$: BehaviorSubject<Classroom[]> = new BehaviorSubject<
     Classroom[]
@@ -67,7 +67,7 @@ export class ClassroomsPageComponent {
     this.authService.isTeacher$.subscribe((user) => {
       this.isTeacher = user;
       if (user) {
-        this.label = 'Create a classroom';
+        this.label = "Create a classroom";
       }
     });
   }
