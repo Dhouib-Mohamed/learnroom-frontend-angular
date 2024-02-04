@@ -38,7 +38,7 @@
           {{"Email is required"|translate}}
         </div>
         <div
-          class="alert alert-danger alert-sign"
+          class="alert alert-warning alert-sign"
           role="alert"
           *ngIf="emailInput.errors?.['email']"
         >
@@ -80,11 +80,11 @@
           {{"Password is required"|translate}}.
         </div>
         <div
-          class="alert alert-danger alert-sign"
+          class="alert alert-warning alert-sign"
           role="alert"
-          *ngIf="passwordInput.errors?.['password']"
+          *ngIf="passwordInput.errors?.['minlength']"
         >
-          {{"Invalid Password format"|translate}}.
+          {{"Password must be at least 6 characters long"|translate}}.
         </div>
       </div>
       <button type="submit" class="coral-button button">{{"login"|translate}}</button>

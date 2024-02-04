@@ -18,11 +18,14 @@ export class LoginComponent {
   constructor() {}
 
   onSubmit(loginForm: NgForm) {
+    if (loginForm.valid) {
     this.email = loginForm.value.email;
     this.password = loginForm.value.password;
     this.authService
       .signIn({ email: this.email, password: this.password })
       .subscribe();
+    }
+
   }
 
   goToPreview(): void {
