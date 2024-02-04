@@ -10,18 +10,18 @@
     <ng-container *ngIf="!taskIsSubmitted">
       <hr [ngStyle]="{'width': '100%', 'margin-top': '4px', 'border-color': '#A6A6A6', 'border-width': '0.75px'}" />
       <p>
-        You finished this task?
+        {{"You finished this task"|translate}}?
       </p>
       <button
               [ngStyle]="{'text-align':'center',color:'white',padding:'15px',width:'200px',backgroundColor:'orange',borderColor:'orange',borderRadius:'12px'}"
               (click)="submitTask()">
-        Mark as Completed
+        {{"Mark as Completed"|translate}}
       </button>
     </ng-container>
     <ng-container *ngIf="taskIsSubmitted">
-      <p [ngStyle]="{'text-align':'center'}" >Task is Completed Succesfully !!</p>
+      <p [ngStyle]="{'text-align':'center'}" >{{"Task is Completed Succesfully"|translate}} !!</p>
       <p [ngStyle]="{'text-align':'center',color:'white',padding:'15px',width:'200px',backgroundColor:'blue',borderRadius:'12px'}" >Well Done</p>
-      <span class="task-hover" (click)="submitTask()" >mark as uncompleted ?</span>
+      <span class="task-hover" (click)="submitTask()" >{{"mark as uncompleted"|translate}} ?</span>
     </ng-container>
 
   </ng-container>

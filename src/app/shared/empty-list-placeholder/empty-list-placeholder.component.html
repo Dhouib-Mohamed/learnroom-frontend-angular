@@ -7,7 +7,7 @@
     <p class="description">{{ descriptionText1 + descriptionText2 }}</p>
     <br />
     <ng-container *ngIf="user !== 'teacher' && type!=='students'">
-      <button class="custom-button" (click)="goHome()">Go home</button>
+      <button class="custom-button" (click)="goHome()">{{"Go home"|translate}}</button>
       <br />
     </ng-container>
   </div>

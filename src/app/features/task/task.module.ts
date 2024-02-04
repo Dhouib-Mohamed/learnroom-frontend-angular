@@ -5,12 +5,13 @@ import { TaskDetailsComponent } from '@features/task/pages/task-details/task-det
 import { ReactiveFormsModule } from '@angular/forms';
 import { TaskFormComponent } from '@features/task/components/task-form/task-form.component';
 import { SharedModule } from '@shared/shared.module';
+import {TranslateModule} from "@ngx-translate/core";
 
 @NgModule({
   declarations: [
     TaskDetailsComponent,
     TaskFormComponent,
   ],
-  imports: [CommonModule, TaskRoutingModule, ReactiveFormsModule, SharedModule],
+  imports: [CommonModule, TaskRoutingModule, ReactiveFormsModule, SharedModule,TranslateModule],
 })
 export class TaskModule {}

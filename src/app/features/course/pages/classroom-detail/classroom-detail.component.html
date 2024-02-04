@@ -1,5 +1,5 @@
 <!-- classroom.component.html -->
-<div class="container mt-4">
+<div class="container mt-4" *ngIf="classroom$ | async as classroom">
   <img
     src="../../../../../assets/images/finance.jpg"
     alt="Classroom Image"
@@ -7,11 +7,11 @@
   />
 
   <div class="d-flex justify-content-between align-items-center mt-3">
-    <h3 class="text-primary">{{(classroom$ | async)?.name}}</h3>
+    <h3 class="text-primary">{{classroom?.name}}</h3>
     <!-- Add the dropdown here -->
   </div>
 
-  <div class="font-weight-light font-size-18 mt-2">{{(classroom$ | async)?.description}}</div>
+  <div class="font-weight-light font-size-18 mt-2">{{classroom?.description}}</div>
 
   <hr class="my-4" />
   <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
@@ -25,7 +25,7 @@
         </form>
         <ng-template #loadingCourses></ng-template>
 
-        <app-course-list [classroomId]="(classroom$ | async)?.id" [courses] ="(courses$ | async) || []"></app-course-list>
+        <app-course-list [classroomId]="classroom?.id" [courses] ="(courses$ | async) || []"></app-course-list>
       </ng-template>
     </li>
     <li [ngbNavItem]="2">

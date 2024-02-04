@@ -103,7 +103,17 @@
   "Add Student": "Add Student",
   "List of assignments": "List of assignments",
   "List of tasks": "List of tasks",
-  "Students": "Students"
+  "Students": "Students",
+  "Deadline passed":"Deadline passed",
+  "Task Title":"Task Title",
+  "Task Title is required": "Task Title is required",
+  "You finished this task":"You finished this task",
+  "Mark as Completed":"Mark as Completed",
+  "Task is Completed Succesfully":"Task is Completed Succesfully",
+  "mark as uncompleted":"mark as uncompleted",
+  "Go home":"Go home"
+
+
 
 
 

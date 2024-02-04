@@ -1,4 +1,4 @@
-<div
+<div *ngIf="currentUser$ | async as currentUser"
   class="sidebar-container"
   [ngClass]="{ 'sidebar-collapsed': !isCollapsed }"
 >
@@ -9,15 +9,15 @@
 
     <div class="hstack-container">
       <app-avatar
-        [name]="(currentUser$ | async)!.name"
-        [avatarColor]="(currentUser$ | async)!.avatar_color"
+        [name]="currentUser!.name"
+        [avatarColor]="currentUser!.avatar_color"
       ></app-avatar>
       <p style="font-size: 1.25rem; margin-bottom: 0">
-        {{ (currentUser$ | async)!.name }}
+        {{ currentUser!.name }}
       </p>
     </div>
 
-    <p>{{ (currentUser$ | async)!.email }}</p>
+    <p>{{ currentUser!.email }}</p>
 
     <div class="hstack-container space-between">
       <h3>{{"Home"|translate}}</h3>

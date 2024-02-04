@@ -1,6 +1,6 @@
 <!-- student.component.html -->
 <div style="display: flex; flex-direction: column ; align-self: start ; align-content: start; padding-top: 10px;width: 100%">
-  <h4 class="mb-3">Teacher :</h4>
+  <h4 class="mb-3">{{ "teacherRole"|translate}} :</h4>
   <div class="teacher mb-5" >
     <app-avatar style="transform: scale(1.2);"
       [name]=" users?.teacher?.name ?? ''"

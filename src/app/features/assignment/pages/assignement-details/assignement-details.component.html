@@ -31,7 +31,7 @@
       </form>
     </ng-container>
   <ng-container *ngIf="isDeadLine && !studentResponse && isTeacher">
-    <h2>Deadline passed</h2>
+    <h2>{{"Deadline passed"|translate}}</h2>
   </ng-container>
   <ng-container *ngIf=" responsesAssignment.length > 0 &&  isTeacher ">
       <form [formGroup]="scoreForm" [ngStyle]="{width:'100%',}">

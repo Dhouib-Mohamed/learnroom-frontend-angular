@@ -103,7 +103,19 @@
   "Add Student": "Ajouter un étudiant",
   "List of assignments": "Liste des devoirs",
   "List of tasks": "Liste des tâches",
-  "Students": "Étudiants"
+  "Students": "Étudiants",
+  "Deadline passed":"Date limite est dépassée",
+  "Task Title":"Titre de la tâche",
+  "Task Title is required": "Le titre de la tâche est requis",
+  "You finished this task":"Avez-vous fini cette tâche",
+  "Mark as Completed":"Marquer comme terminé",
+  "Task is Completed Succesfully":"La tâche est terminée avec succès",
+  "mark as uncompleted":"marquer comme incomplet",
+  "Go home":"Aller à la page d'accueil"
+
+
+
+
 
 
 
