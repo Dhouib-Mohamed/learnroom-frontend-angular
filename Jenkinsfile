@@ -3,13 +3,13 @@ pipeline {
     stages {
         stage('Pull from GitHub') {
             steps {
-                git 'https://github.com/Dhouib-Mohamed/backend-learnroom.git'
+                git 'https://github.com/Dhouib-Mohamed/learnroom-frontend-angular.git'
             }
         }
         stage('Build image') {
             steps {
                 script {
-                    dockerImage = docker.build('nadamankai/learn-room:backend')
+                    dockerImage = docker.build('nadamankai/learn-room:frontend')
                 }
             }
         }
