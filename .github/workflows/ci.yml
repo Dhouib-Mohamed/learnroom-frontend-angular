@@ -1,0 +1,44 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "21"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Docker image
+        run: |
+          docker build -t maissene/learn-room:latest .
+          docker login -u maissene -p ${{ secrets.DOCKERHUB_TOKEN }}
+          docker push maissene/learn-room:latest
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    needs: build
+
+    steps:
+      - name: Start Minikube
+        run: minikube start
+
+      - name: Load Docker image into Minikube
+        run: |
+          eval $(minikube docker-env)
+          docker pull maissene/learn-room:latest
+          docker tag maissene/learn-room:latest learn-room:latest
+
+      - name: Deploy to Minikube
+        run: kubectl apply -f deployment.yaml -f service.yaml
