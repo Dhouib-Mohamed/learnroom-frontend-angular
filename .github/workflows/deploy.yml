@@ -23,7 +23,7 @@ jobs:
         run: docker push ${{ secrets.DOCKER_HUB_USERNAME }}/learn-room-frontend:${{ steps.meta.outputs.tags }}
 
   cd:
-    uses: actions/checkout@v2
+    runs-on: ubuntu-latest
 
     steps:
         - name: Checkout code
