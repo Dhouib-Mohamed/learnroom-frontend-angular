@@ -12,8 +12,8 @@ export class LoginComponent {
   authService = inject(AuthService);
   router = inject(Router);
 
-  email: string = '';
-  password: string = '';
+  email = '';
+  password = '';
 
   constructor() {}
 

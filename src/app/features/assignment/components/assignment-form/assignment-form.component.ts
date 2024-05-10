@@ -16,13 +16,13 @@ export class AssignmentFormComponent {
     points: undefined,
     deadline: undefined,
   };
-  buttonName:string="Add";
+  buttonName ="Add";
   assignmentForm: FormGroup=new FormGroup({});
   assignmentService = inject(AssignementService)
-  @Input() courseId: string = '';
-  @Input() isEditing: boolean = false;
+  @Input() courseId = '';
+  @Input() isEditing = false;
   @Input() assignment: Assignement = {} as Assignement;
-  @Input() assignmentId:string = "1";
+  @Input() assignmentId = "1";
   @Output() submit = new EventEmitter<Assignement>
   constructor(
     private fb: FormBuilder,

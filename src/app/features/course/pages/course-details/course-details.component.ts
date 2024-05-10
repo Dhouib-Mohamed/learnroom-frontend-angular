@@ -15,7 +15,7 @@ export class CourseDetailsComponent implements OnInit{
   tasks$: Observable<Task[]> = new Observable<Task[]>();
   assignments$: Observable<Assignement[]> = new Observable<Assignement[]>();
   course$: Observable<Course> = new Observable<Course>();
-  courseId: string="";
+  courseId="";
   constructor(private route: ActivatedRoute,private courseService: CourseService)
   { }
 

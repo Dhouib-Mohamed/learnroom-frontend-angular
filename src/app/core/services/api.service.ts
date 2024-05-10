@@ -3,12 +3,13 @@ import {map, Observable, of} from 'rxjs';
 import {catchError} from 'rxjs/operators';
 import {ToastrService} from 'ngx-toastr';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {environment} from "../../../environment/environment";
 
 @Injectable({
   providedIn: 'root',
 })
 export class ApiService {
-  private BASE_URL = 'http://localhost:3000';
+  private BASE_URL = environment.backendUrl;
   private init = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',

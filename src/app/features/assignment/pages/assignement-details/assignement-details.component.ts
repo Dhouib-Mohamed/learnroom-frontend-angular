@@ -16,7 +16,7 @@ import {AssignementService} from "@features/assignment/assignement.service";
 })
 export class AssignementDetailsComponent implements OnInit {
   user: any = {role:"teacher"}
-  assignmentId: string="";
+  assignmentId ="";
   assignment: Assignement = {} as Assignement;
   assignment$: Observable<Assignement> = new Observable<Assignement>();
   responseAssignment$: Observable<ResponseAssignement> = new Observable<ResponseAssignement>();
@@ -24,10 +24,10 @@ export class AssignementDetailsComponent implements OnInit {
   submitAssignmentForm: FormGroup = new FormGroup({
     description: new FormControl('', [Validators.required, Validators.minLength(5)])
   });
-  editMode:boolean=false;
-  isAssignmentSubmited:boolean=false;
+  editMode =false;
+  isAssignmentSubmited =false;
   modalService = inject(NgbModal);
-  isTeacher : boolean = false;
+  isTeacher  = false;
 
   constructor(private route: ActivatedRoute,
               public authService : AuthPersistence, private router:Router, private formBuilder: FormBuilder, private assignmentService: AssignementService)
@@ -101,7 +101,7 @@ export class AssignementDetailsComponent implements OnInit {
   }
 
   submitResponseAssignment(assignementResponseId:string){
-
+    console.log("test")
   }
   onScoreChange(event: Event, index: number) {
     const newScore=(event.target as HTMLInputElement).value;

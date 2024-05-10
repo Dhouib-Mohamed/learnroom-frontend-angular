@@ -7,8 +7,8 @@ import {Router} from "@angular/router";
   styleUrls: ['./empty-list-placeholder.component.scss']
 })
 export class EmptyListPlaceholderComponent implements OnChanges {
-@Input() type: string = '';
-@Input() user: string = '';
+@Input() type = '';
+@Input() user = '';
 
   image = 'assets/images/emptyState.png';
 

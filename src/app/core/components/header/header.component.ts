@@ -12,13 +12,13 @@ import {TranslateService} from "@ngx-translate/core";
 })
 export class HeaderComponent {
   router = inject(Router);
-  @Input() isOpen: boolean = false;
-  isCollapsed: boolean = true; // Add or modify this property as needed
-  showHeader: boolean = true;
+  @Input() isOpen = false;
+  isCollapsed = true; // Add or modify this property as needed
+  showHeader = true;
   authService = inject(AuthPersistence);
   connService = inject(AuthService);
   translate = inject(TranslateService)
-  selectedLanguage: string = 'fr'; // Set the default language here
+  selectedLanguage = 'fr'; // Set the default language here
 
   ngOnInit() {
     this.router.events.subscribe((event) => {

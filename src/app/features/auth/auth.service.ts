@@ -21,12 +21,12 @@ export class AuthService {
       this.getUser()
     } else {
       this.logout();
-      router.navigate(['/auth/login']);
+      router.navigate(['/login']);
     }
   }
 
   signIn(data: SignIn) {
-    return this.api.post<{token:String}>(`/user/signin`, data).pipe(
+    return this.api.post<{token: string}>(`/user/signin`, data).pipe(
       tap((res: any) => {
         if (res.token) {
           this.CookieService.set('auth', res.token, {

@@ -16,7 +16,7 @@ import {Task} from "@core/models/task.model";
 export class SidebarComponent {
 
   @Output() toggle = new EventEmitter<void>();
-  @Input() isCollapsed: boolean = true;
+  @Input() isCollapsed = true;
 
   data$ : BehaviorSubject<{courses:Course[][],tasks:Task[][],assignments:Assignement[][]}> = new BehaviorSubject<{courses:Course[][],tasks:Task[][],assignments:Assignement[][]}>({ courses:[], tasks: [], assignments: [] });
   courses$: BehaviorSubject<Course[]> = new BehaviorSubject<Course[]>([]);

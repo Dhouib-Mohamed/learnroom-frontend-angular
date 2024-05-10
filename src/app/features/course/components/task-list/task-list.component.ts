@@ -13,8 +13,8 @@ import {TaskFormComponent} from "@features/task/components/task-form/task-form.c
 export class TaskListComponent {
   @Input() tasks : Task[] = [];
   @Input() courseId: string | undefined;
-  @Input () inCard:boolean = false;
-  @Input () withButton: boolean=false;
+  @Input () inCard = false;
+  @Input () withButton=false;
   authService = inject(AuthPersistence)// Fictive data, replace with your actual data
   modal = inject(NgbModal);
   onAddTaskClick(): void {

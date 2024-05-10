@@ -6,8 +6,8 @@ import {Component, Input} from '@angular/core';
   styleUrls: ['./avatar.component.scss']
 })
 export class AvatarComponent {
-  @Input() name: string = '';
-  @Input() avatarColor: string = '#000000';
+  @Input() name = '';
+  @Input() avatarColor = '#000000';
 
   get initials(): string {
     return this.name

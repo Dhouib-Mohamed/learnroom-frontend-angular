@@ -15,7 +15,7 @@ export class EditTaskFormComponent{
   taskForm: FormGroup = new FormGroup({});
   taskService = inject(TaskService);
   @Input() task: Task = {} as Task;
-  @Input() taskId:String = "1";
+  @Input() taskId = "1";
   @Output() editForm =  new EventEmitter<Assignement>
 
   constructor(

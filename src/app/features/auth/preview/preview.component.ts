@@ -41,7 +41,7 @@ export class PreviewComponent {
     },
   ];
   startSignup(): void {
-    this.router.navigate(['auth/login']);
+    this.router.navigate(['/login']);
   }
   goToPreview(): void {
     this.router.navigate(['/preview']);

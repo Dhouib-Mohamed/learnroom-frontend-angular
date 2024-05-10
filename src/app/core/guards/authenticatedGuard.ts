@@ -9,7 +9,7 @@ export const authenticatedGuard: CanActivateFn = (route) => {
   authService.isAuthenticated$.subscribe((res) => (authenticated = res));
   if (!authenticated && localStorage.getItem('auth') !== "true"){
     console.log("hi")
-    router.navigate(['/auth/login']);
+    router.navigate(['/login']);
     return false;
   }
 

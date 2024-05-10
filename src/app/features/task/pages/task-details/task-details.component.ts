@@ -13,14 +13,14 @@ import {TaskService} from "@features/task/task.service";
   styleUrls: ['./task-details.component.scss'],
 })
 export class TaskDetailsComponent implements OnInit {
-  taskId: string = '';
+  taskId = '';
   task$: Observable<Task> = new Observable<Task>();
   task : Task = {} as Task;
-  editMode: boolean = false;
+  editMode = false;
   taskIsSubmitted$:Observable<ResponseTask>= new Observable<ResponseTask>();
-  taskIsSubmitted:boolean=false
+  taskIsSubmitted=false
   modalService = inject(NgbModal);
-  isTeacher : boolean = false;
+  isTeacher  = false;
   constructor(
     private route: ActivatedRoute,
     private taskService: TaskService,

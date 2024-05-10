@@ -13,8 +13,8 @@ import {AssignmentFormComponent} from "@features/assignment/components/assignmen
 export class AssignmentListComponent {
   @Input() assignments: Assignement[] = [];
   @Input() courseId: string | undefined;
-  @Input () inCard:boolean = false;
-  @Input() withButton:boolean=false;
+  @Input () inCard = false;
+  @Input() withButton=false;
 
   modalService = inject(NgbModal)
   authService = inject(AuthPersistence)

@@ -11,7 +11,7 @@ import {TaskService} from "@features/task/task.service";
 export class TaskFormComponent {
   taskForm: FormGroup;
   taskService = inject(TaskService);
-  @Input() courseId: string = '';
+  @Input() courseId = '';
 
   constructor(
     public activeModal: NgbActiveModal,

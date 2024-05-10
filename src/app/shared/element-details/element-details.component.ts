@@ -6,10 +6,10 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
   styleUrls: ['./element-details.component.scss'],
 })
 export class ElementDetailsComponent {
-  @Input() isTeacher: boolean=false;
+  @Input() isTeacher=false;
   @Input() element: any = {};
-  @Input() elementType: string = '';
-  @Input() editMode: boolean = false;
+  @Input() elementType = '';
+  @Input() editMode = false;
 
   @Output() deleteElement = new EventEmitter();
   @Output() editModeChange: EventEmitter<boolean> = new EventEmitter<boolean>();

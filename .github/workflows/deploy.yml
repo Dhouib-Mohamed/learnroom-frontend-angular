@@ -2,8 +2,8 @@ name: Build and Push Docker Image
 
 on:
   push:
-    branches:
-      - master
+    tags:
+      - "[0-9]+.[0-9]+.[0-9]+"
 
 jobs:
   build:
@@ -17,7 +17,29 @@ jobs:
         run: echo ${{ secrets.DOCKER_HUB_PASSWORD }} | docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} --password-stdin
 
       - name: Build Docker image
-        run: docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/learn-room:frontend .
+        run: docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/learn-room-frontend:${{ steps.meta.outputs.tags }} .
 
       - name: Push Docker image
-        run: docker push ${{ secrets.DOCKER_HUB_USERNAME }}/learn-room:frontend
+        run: docker push ${{ secrets.DOCKER_HUB_USERNAME }}/learn-room-frontend:${{ steps.meta.outputs.tags }}
+
+  cd:
+    uses: actions/checkout@v2
+
+    steps:
+        - name: Checkout code
+          uses: actions/checkout@v2
+          with:
+          repository: 'Dhouib-Mohamed/k8s-learnroom'
+          ref: 'main'
+        - name: replace the frontend.image.tag in charts/learnroom/values.yml by the new tag without changing the oter content
+          run: |
+            sed -i '/^frontend:/,/^\S/ s/tag: .*/tag: ${{ steps.meta.outputs.tags }}/g' charts/learnroom/values.yml
+        - name: commit the changes
+          run: |
+            git config --global user.email "learnroom@dev.com"
+            git config --global user.name "learnroom"
+            git add charts/learnroom/values.yml
+            git commit -m "Update frontend image tag to ${{ steps.meta.outputs.tags }}"
+        - name: push the changes
+          run: |
+            git push --set-upstream origin main

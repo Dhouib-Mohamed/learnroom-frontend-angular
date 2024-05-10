@@ -10,7 +10,7 @@ import {ClassroomService} from "@features/classroom/classroom.service";
 })
 export class StudentFormComponent {
   studentForm: FormGroup;
-  @Input() classroomId: string = '';
+  @Input() classroomId = '';
 
   constructor(
     public activeModal: NgbActiveModal,
